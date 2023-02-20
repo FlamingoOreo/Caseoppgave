@@ -30,7 +30,7 @@ class OrgDataService {
         );
         return results;
       }
-    async deleteAll(){
+     deleteAll(){
         return this.orgData.destroy({
             where: {}
         })

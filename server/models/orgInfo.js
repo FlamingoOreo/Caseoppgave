@@ -9,7 +9,7 @@ module.exports = function(sequelize, Sequelize) {
       timestamps: false
     });
     orginformation.associate = function(models) {
-      orginformation.hasOne(models.organization, {
+      orginformation.hasMany(models.organization, {
         foreignKey: 'organisasjonsformkode',    // Using orgformkode as the foreign key to connect them
         sourceKey: 'organisasjonsformkode'
       });

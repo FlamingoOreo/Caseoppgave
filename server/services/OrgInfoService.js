@@ -3,7 +3,7 @@ class OrgInfoService {
         this.client = db.sequelize;
         this.orgInfo = db.orginformation;
     }
-    async create(orgformkode,orgbeskrivele) {
+    create(orgformkode,orgbeskrivele) {
         return this.orgInfo.create(
             {
                 organisasjonsformkode: orgformkode,
@@ -11,12 +11,12 @@ class OrgInfoService {
             }
         )
     }
-    async getAll() {
+    getAll() {
         return this.orgInfo.findAll({
             where: {}
         })
     }
-    async deleteAll(){
+    deleteAll(){
         return this.orgInfo.destroy({
             where: {}
         })
